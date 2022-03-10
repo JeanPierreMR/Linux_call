@@ -13,7 +13,9 @@ wget -P ~/ https://mirrors.edge.kernel.org/pub/linux/kernel/v5.x/linux-16.04.01.
 ```
 
 Ahora se debe descomprimir y reiniciar su máquina virtual. Esto se lleva a cabo con el siguiente comando:
+```
 sudo tar -xvf linux-16.04.01.tar.xz -C ~/ && reboot
+```
 
 ### 3. Configuración del Kernel
 
