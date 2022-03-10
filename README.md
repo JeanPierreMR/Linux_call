@@ -89,16 +89,8 @@ sudo make modules_install install
 ```
 ![image](https://user-images.githubusercontent.com/48104764/157768759-0050255e-acba-487e-9316-9777cbc13503.png)
 
-Esto creará distintos archivos dentro un directorio llamado "boot" y creará automaticamente una entrada en grub.cfg. Los archivos agregados son:
-1. System.map-16.04.01
-2. vmlinuz-16.04.01
-3. initrd.img-16.04.01
-4. config-16.04.01
+Para actualizar el Kernel se reinició la máquina virtual.
 
-Para actualizar el Kernel usaremos el siguiente comando: 
-```
-shutdown -r now
-```
 Luego de reiniciar verificamos la versión de kernel con el comando utilizado anteriormente:
 ```
 uname -r
