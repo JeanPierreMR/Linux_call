@@ -20,7 +20,7 @@ sudo tar -xvf linux-16.04.01.tar.xz -C ~/ && reboot
 ### 3. Definición de un nuevo system call
 Se creo un directorio llamado custom_calls con los siguientes comandos:
 ```
-mkdir hello
+mkdir custom_calls
 ```
 En este directorio se creo un archivo llamado check_complete con el siguiente comando: 
 ```
@@ -96,15 +96,28 @@ Luego de reiniciar verificamos la versión de kernel con el comando utilizado an
 uname -r
 ```
 ### 5. Probar la llamada al sistema
-Para empezar a probar utilizaremos el siguiente comando:
+Para probar utilizamos las siguientes funciones: 
 ```
-subl check_complete.c
+#include <stdio.h>
+#include <linux/kernel.h>
+#include <sys/syscall.h>
+#include <unistd.h>
+int main()
+{
+	char exp[100];
+	double result;
+	scanf("%s", exp);
+	char *x = exp;
+	// Function call
+	if (syscall(329, x))
+	{
+	printf("Balanced \n");
+	}
+	else
+	printf("Not Balanced \n");
+	return 0;
+}
 ```
-Luego lo compilamos:
-```
-gcc -o check_complete check_complete.c
-```
-Ejecutamos por función:
-```
-./check_complete 'función a probar'
-```
+![image](https://user-images.githubusercontent.com/48104764/157782695-243447ba-21a7-44db-9f36-6d8791f3fee6.png)
+
+
