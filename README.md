@@ -1,6 +1,9 @@
 # Linux_call
 
-Luego de revisar en clase cómo funcionan los system calls, creamos un repositorio para explicar cómo añadir un system call propio al kernel y hacer una prueba de este. Todos los archivos mencionados se encuentran en este mismo repositorio. 
+## Introducción
+El Kernel es código central de un sistema operativo. Al momento que computadora incia, el gestor de arranque y el núcleo son las primeras piezas de código que se cargan en la máquina. Así pues, el kernel tiene control sobre todo el sistema, su memoria, procesador, etc.
+
+Luego de entender esta pequeña introducción, creamos un repositorio para explicar cómo añadir un system call propio al kernel y hacer una prueba de este. Todos los archivos mencionados se encuentran en este mismo repositorio. 
 
 ### 1. Configurar la máquina virtual 
 Se utilizó Ubuntu en Oracle VM Virtualbox con 4 cores para configurar el ambiente. Iniciando con encender la máquina virtual y acceder a la terminal. 
