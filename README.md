@@ -99,7 +99,7 @@ Luego de reiniciar verificamos la versión de kernel con el comando utilizado an
 uname -r
 ```
 ### 5. Probar la llamada al sistema
-Para probar utilizamos las siguientes funciones: 
+Para probar utilizamos el siguiente código. En este podemos ver que en ```if (syscall(329, x))``` está específicado, ya que viene de la tabla añadida, especificando el número de system call. 
 ```
 #include <stdio.h>
 #include <linux/kernel.h>
