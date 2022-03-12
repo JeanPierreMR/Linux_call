@@ -49,7 +49,7 @@ cd linux-16.04.01.tar.xz
 
 Agregamos una llamada al sistema personalizada a la tabla de system calls. En nuestro caso, en base a la arquitectura de la máquina, utilizamos:
 ```
-subl arch/x86/entry/syscalls/syscall_64.tbl
+gedit arch/x86/entry/syscalls/syscall_64.tbl
 ```
 
 En este archivo, agregamos una linea (329) luego del último tipo common en el syscall, con nuestra llamada al sistema:
