@@ -67,7 +67,7 @@ Al final de este archivo antes del ```endif``` agregamos:
 asmlinkage  long  sys_check_compete(char *exp);
 ```
 ![image](https://user-images.githubusercontent.com/48104764/157765496-32e80e2b-62cf-4761-908f-856389d2b9c7.png)
-Esto define el prototipo de la función de nuestra llamada al sistema. "asmlinkage"  es una palabra clave utilizada para indicar que todos los parametros de la función estarán disponibles en el stack.
+La etiqueta asmlinkage es un #define que le dice al compilador que la función no debe esperar encontrar ninguno de sus argumentos en los registros, sino solo en el stack del CPU.
 
 ### 4. Compilar el Kernel
 Por último, para configurar el Kernel utilizamos el siguiente comando:
